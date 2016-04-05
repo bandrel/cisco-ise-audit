@@ -1,0 +1,31 @@
+[Email]
+enabled = no
+host = smtp.domain.com
+subject = Daily ISE Config Audit
+#space separated
+to_address = test@example.com
+from_address = isereport@example.com
+#Attach ZIP file of both old and new reports?
+attachment = yes
+
+[Syslog]
+enabled = no
+host = 1.1.1.1
+syslog_source = 2.2.2.2
+
+[Scope]
+#Three letter site codes.  ALL will bypass this filtering feature
+sites = ALL
+#Space separated list of VLANs that are in scope of the audit
+vlans = 1 2 3 4 5
+#space separated list of switches that are to be filtered out
+excluded_switches = exampleswitch
+excluded_site =
+
+[Regions]
+#Three leter site codes that belong to a region
+amea = ABC
+apac = XYZ
+emea = EFH
+
+
